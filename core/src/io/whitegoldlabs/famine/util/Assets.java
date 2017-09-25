@@ -13,7 +13,10 @@ public class Assets
 	// Sprites                                                                                   //
 	// ------------------------------------------------------------------------------------------//
 	public static final AssetDescriptor<Texture> mapTest =
-			new AssetDescriptor<Texture>(Gdx.files.internal("map_test.png"), Texture.class);
+			new AssetDescriptor<Texture>(Gdx.files.internal("map_test_grid.png"), Texture.class);
+	
+	public static final AssetDescriptor<Texture> unitTest =
+			new AssetDescriptor<Texture>(Gdx.files.internal("unit_test.png"), Texture.class);
 	
 	// ------------------------------------------------------------------------------------------//
 	// Music                                                                                     //
@@ -31,6 +34,7 @@ public class Assets
 	public void load()
 	{
 		assetManager.load(mapTest);
+		assetManager.load(unitTest);
 		assetManager.finishLoading();
 	}
 }

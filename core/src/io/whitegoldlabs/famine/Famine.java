@@ -22,6 +22,9 @@ public class Famine extends Game
 	                                                                                             //
 	public OrthographicCamera camera;                                                            //
 	public SpriteBatch batch;                                                                    //
+	                                                                                             //
+	public boolean unitIsMoving;                                                                 //
+	public int movementAmount;                                                                   //
 	// ------------------------------------------------------------------------------------------//
 	
 	@Override
@@ -36,6 +39,10 @@ public class Famine extends Game
 		batch = new SpriteBatch();
 		
 		this.engine = new Engine();
+		
+		// Test values.
+		unitIsMoving = false;
+		movementAmount = 0;
 		
 		// Set the first screen of the game.
 		TestScreen testScreen = new TestScreen(this);
